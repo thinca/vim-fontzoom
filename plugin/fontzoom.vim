@@ -61,6 +61,8 @@ if !exists('g:fontzoom_no_default_key_mappings')
 \  || !g:fontzoom_no_default_key_mappings
   silent! nmap <unique> <silent> + <Plug>(fontzoom-larger)
   silent! nmap <unique> <silent> - <Plug>(fontzoom-smaller)
+  silent! nmap <unique> <silent> <C-ScrollWheelUp> <Plug>(fontzoom-larger)
+  silent! nmap <unique> <silent> <C-ScrollWheelDown> <Plug>(fontzoom-smaller)
 endif
 
 let &cpo = s:save_cpo

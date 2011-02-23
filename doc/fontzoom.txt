@@ -48,6 +48,8 @@ g:fontzoom_no_default_key_mappings is defined:
 --------		-----------------------------
 +			<Plug>(fontzoom-larger)
 -			<Plug>(fontzoom-smaller)
+<C-ScrollWheelUp>	<Plug>(fontzoom-larger)
+<C-ScrollWheelDown>	<Plug>(fontzoom-smaller)
 
 ------------------------------------------------------------------------------
 COMMANDS					*fontzoom-commands*
@@ -89,6 +91,10 @@ LIMITATION					*fontzoom-limitation*
 
 ==============================================================================
 CHANGELOG					*fontzoom-changelog*
+
+x.x.x	xxxx-xx-xx
+	- Added default key mappings.
+	  - <C-ScrollWheelUp> and <C-ScrollWheelDown>.
 
 0.1.0	2009-12-25
 	- Initial version.
