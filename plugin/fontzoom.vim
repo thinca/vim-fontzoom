@@ -1,5 +1,5 @@
 " The fontsize controller in gVim.
-" Version: 0.1.1
+" Version: 0.2.0
 " Author : thinca <thinca+vim@gmail.com>
 " License: zlib License
 
