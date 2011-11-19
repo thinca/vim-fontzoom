@@ -1,8 +1,7 @@
 " The fontsize controller in gVim.
 " Version: 0.1.1
 " Author : thinca <thinca+vim@gmail.com>
-" License: Creative Commons Attribution 2.1 Japan License
-"          <http://creativecommons.org/licenses/by/2.1/jp/deed.en>
+" License: zlib License
 
 if exists('g:loaded_fontzoom') || !has('gui_running')
   finish
