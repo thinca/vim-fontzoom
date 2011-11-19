@@ -92,6 +92,9 @@ LIMITATION					*fontzoom-limitation*
 ==============================================================================
 CHANGELOG					*fontzoom-changelog*
 
+x.x.x	xxxx-xx-xx
+	- Supported 'guifontwide'.
+
 0.1.1	2011-02-24
 	- Added default key mappings.
 	  - <C-ScrollWheelUp> and <C-ScrollWheelDown>.
