@@ -13,28 +13,31 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
+function! s:change_fontsize(font, size)
+    return join(map(split(a:font, '\\\@<!,'),
+    \   printf('substitute(v:val, %s, %s, "g")',
+    \   string(g:fontzoom_pattern),
+    \   string('\=max([1,' . a:size . '])'))), ',')
+endfunction
+
 function! s:fontzoom(size, reset)
   if a:reset
     if exists('s:keep')  " Reset font size.
       let [&guifont, &lines, &columns] = s:keep
       unlet! s:keep
     endif
-  elseif a:size == ''
+  elseif a:size ==# ''
     echo matchstr(&guifont, g:fontzoom_pattern)
   else
-    let size = (a:size =~ '^[+-]' ? 'submatch(0)' : '') . a:size
     if !exists('s:keep')
       let s:keep = [&guifont, &lines, &columns]
     endif
-    let &guifont = join(map(split(&guifont, '\\\@<!,'),
-    \   printf('substitute(v:val, %s, %s, "g")',
-    \   string(g:fontzoom_pattern),
-    \   string('\=max([1,' . size . '])'))), ',')
+    let newsize = (a:size =~# '^[+-]' ? 'submatch(0)' : '') . a:size
+    let &guifont = s:change_fontsize(&guifont, newsize)
     " Keep window size if possible.
     let [&lines, &columns] = s:keep[1:]
   endif
 endfunction
-
 
 
 if !exists('g:fontzoom_pattern')
