@@ -43,11 +43,11 @@ endfunction
 if !exists('g:fontzoom_pattern')
   " TODO: X11 is not tested because I do not have the environment.
   let g:fontzoom_pattern =
-  \   has('win32') || has('win64') ||
-  \   has('mac') || has('macunix') ? ':h\zs\d\+':
-  \   has('gui_gtk')               ? '\s\+\zs\d\+$':
-  \   has('X11')                   ? '\v%([^-]*-){6}\zs\d+\ze%(-[^-]*){7}':
-  \                                  '*Unknown system*'
+  \   has('win32')   || has('win64') ||
+  \   has('mac')     || has('macunix') ? ':h\zs\d\+':
+  \   has('gui_gtk') || has('gui_qt')  ? '\s\+\zs\d\+$':
+  \   has('X11')                       ? '\v%([^-]*-){6}\zs\d+\ze%(-[^-]*){7}':
+  \                                      '*Unknown system*'
 endif
 
 
