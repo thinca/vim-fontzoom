@@ -32,14 +32,14 @@ INTERFACE					*fontzoom-interface*
 ------------------------------------------------------------------------------
 KEY MAPPINGS					*fontzoom-key-mappings*
 
-<Plug>(fontzoom-learger)			*<Plug>(fontzoom-learger)*
+<Plug>(fontzoom-larger)				*<Plug>(fontzoom-larger)*
 			Fontsize is made large [count] point.
 
 <Plug>(fontzoom-smaller)			*<Plug>(fontzoom-smaller)*
 			Fontsize is made small [count] point.
 
 
-					    *g:fontzoom_no_default_key_mappings*
+					*g:fontzoom_no_default_key_mappings*
 The following key mappings will be also available unless
 g:fontzoom_no_default_key_mappings is defined:
 
